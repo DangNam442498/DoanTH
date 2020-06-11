@@ -34,7 +34,7 @@ class MapsPageState extends State<MapsPage> {
             child: GoogleMap(
               mapType: MapType.normal,
               initialCameraPosition: CameraPosition(
-                  target: LatLng(-23.533773, -46.625290), zoom: 10),
+                  target: LatLng(10.8561423, 106.7828604), zoom: 10),
               onMapCreated: (GoogleMapController controller) {
                 _controller.complete(controller);
               },
@@ -67,10 +67,10 @@ class MapsPageState extends State<MapsPage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: _boxes(
-                  "https://thebrazilbusiness.com/www/images/media/700_394/1040352461683.jpg",
-                  -23.5516249,
-                  -46.6778654,
-                  "Grosery Brazil"),
+                  "https://lh5.googleusercontent.com/p/AF1QipMKVGVDjVqnaaJDJJyGLxLmdmXH2cOebtmWxyiZ=w428-h240-k-no",
+                  10.8683488,
+                  106.7739816,
+                  "Coopxtra Thủ Đức"),
             ),
             SizedBox(width: 10.0),
             Padding(
@@ -157,7 +157,7 @@ class MapsPageState extends State<MapsPage> {
           children: <Widget>[
             Container(
                 child: Text(
-              "Opens 7:00 am",
+              "Mở cửa 7:30 am",
               style: TextStyle(
                 color: Colors.black54,
                 fontSize: 18.0,
@@ -165,7 +165,7 @@ class MapsPageState extends State<MapsPage> {
             )),
             Container(
                 child: Text(
-              "Close 22 pm",
+              "Đóng cửa 22 pm",
               style: TextStyle(
                 color: Colors.black54,
                 fontSize: 18.0,
@@ -174,14 +174,7 @@ class MapsPageState extends State<MapsPage> {
           ],
         )),
         SizedBox(height: 5.0),
-        Container(
-            child: Text(
-          "St 76 Av 52 Bill",
-          style: TextStyle(
-              color: Colors.black54,
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold),
-        )),
+      
       ],
     );
   }
@@ -201,7 +194,7 @@ class MapsPageState extends State<MapsPage> {
 
 Marker manboMarker = Marker(
   markerId: MarkerId('Supermarkets'),
-  position: LatLng(-23.5785739, -46.6771112),
+  position: LatLng(10.8682724, 106.7740798),
   infoWindow: InfoWindow(title: 'Mambo - Moema'),
   icon: BitmapDescriptor.defaultMarkerWithHue(
     BitmapDescriptor.hueRed,
@@ -210,13 +203,14 @@ Marker manboMarker = Marker(
 
 Marker calixtoMarker = Marker(
   markerId: MarkerId('Calixto'),
-  position: LatLng(-23.5516249, -46.6778654),
+  position: LatLng(10.8682724, 106.7740798),
   infoWindow: InfoWindow(title: 'Fair Benedito Calixto'),
   icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
 );
+
 Marker brazilMarker = Marker(
   markerId: MarkerId('brazil'),
-  position: LatLng(-23.5464997, -46.7602705),
+  position: LatLng(10.8682724, 106.7740798),
   infoWindow: InfoWindow(title: 'Market Brazil'),
   icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueMagenta),
 );
@@ -225,23 +219,23 @@ Marker brazilMarker = Marker(
 
 Marker brazil1Marker = Marker(
   markerId: MarkerId('brazil1'),
-  position: LatLng(-23.5785739, -46.6771112),
-  infoWindow: InfoWindow(title: 'Supermarkets'),
+  position: LatLng(10.8682724, 106.7740798),
+  infoWindow: InfoWindow(title: 'Siêu thị'),
   icon: BitmapDescriptor.defaultMarkerWithHue(
     BitmapDescriptor.hueOrange,
   ),
 );
 Marker brazil2Marker = Marker(
   markerId: MarkerId('brazil2'),
-  position: LatLng(-23.5785739, -46.6771112),
-  infoWindow: InfoWindow(title: 'Mercado Municipal de São Paulo'),
+  position: LatLng(10.8682724, 106.7740798),
+  infoWindow: InfoWindow(title: 'Coopxtra Thủ Đức'),
   icon: BitmapDescriptor.defaultMarkerWithHue(
     BitmapDescriptor.hueMagenta,
   ),
 );
 Marker brazil3Marker = Marker(
   markerId: MarkerId('brazil3'),
-  position: LatLng(-23.5458521, -46.6466167),
+  position: LatLng(11.8682724, 106.7740798),
   infoWindow: InfoWindow(title: 'market Kinjo Yamato'),
   icon: BitmapDescriptor.defaultMarkerWithHue(
     BitmapDescriptor.hueMagenta,

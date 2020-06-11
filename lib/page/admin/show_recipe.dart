@@ -38,7 +38,7 @@ class _InicioPageState extends State<InicioPage> {
     setState(() {
       Auth().currentUser().then((onValue) {
         userID = onValue;
-        print('user id $userID');
+        print('Đăng nhập với user: $userID');
       });
     });
   }

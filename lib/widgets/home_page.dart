@@ -33,7 +33,7 @@ class _HomePageRecipesState extends State<HomePageRecipes> {
             alignment: Alignment.topCenter,
             child: Container(
               child: Text(
-                'Favorite',
+                'Yêu thích',
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 18.0,

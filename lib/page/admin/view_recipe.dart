@@ -130,7 +130,7 @@ class _ViewRecipeState extends State<ViewRecipe> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('View Recipe'),
+        title: Text('Chi tiết công thức'),
       ),
       body: ModalProgressHUD(
           inAsyncCall: _isInAsyncCall,

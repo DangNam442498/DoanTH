@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
   void initState() {
     super.initState();
     setState(() {
-      _lsaddress = getCiudadItems();
+      _lsaddress = getCityItems();
       _address = _lsaddress[0].value;
     });
   }
@@ -49,17 +49,17 @@ class _LoginPageState extends State<LoginPage> {
     return await Firestore.instance.collection('city').getDocuments();
   }
 
-  //Dropdownlist from firestore
-  List<DropdownMenuItem<String>> getCiudadItems() {
+  //Dropdownlist lấy dữ liệu từ Firebase
+  List<DropdownMenuItem<String>> getCityItems() {
     List<DropdownMenuItem<String>> items = List();
-    QuerySnapshot dataCiudades;
+    QuerySnapshot dataCity;
     getData().then((data) {
-      dataCiudades = data;
-      dataCiudades.documents.forEach((obj) {
-        print('${obj.documentID} ${obj['nombre']}');
+      dataCity = data;
+      dataCity.documents.forEach((obj) {
+        print('Lấy dữ liệu đăng ký: ${obj.documentID} ${obj['name']}');
         items.add(DropdownMenuItem(
           value: obj.documentID,
-          child: Text(obj['nombre']),
+          child: Text(obj['name']),
         ));
       });
     }).catchError((error) => print('Có lỗi' + error));
@@ -250,7 +250,7 @@ class _LoginPageState extends State<LoginPage> {
         TextFormField(
           keyboardType: TextInputType.phone,
           decoration: InputDecoration(
-            labelText: 'Điện thoại di động',
+            labelText: 'Điện thoại',
             icon: Icon(FontAwesomeIcons.phone),
           ),
           validator: (value) =>
@@ -280,7 +280,7 @@ class _LoginPageState extends State<LoginPage> {
         TextFormField(
             keyboardType: TextInputType.text,
             decoration: InputDecoration(
-              labelText: 'Phương hướng',
+              labelText: 'Địa chỉ',
               icon: Icon(Icons.person_pin_circle),
             ),
             validator: (value) => value.isEmpty ? 'Địa chỉ không được để trống' : null,

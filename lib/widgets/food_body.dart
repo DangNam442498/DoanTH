@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:recipes_app/auth/auth.dart';
 import 'package:recipes_app/model/recipe_model.dart';
+import 'package:recipes_app/page/admin/view_recipe.dart';
 
 //import 'package:recipes/pages/admin/ver_receta.dart';
 
@@ -58,14 +59,13 @@ class _FoodBodyState extends State<FoodBody> {
                                   image: document['image'].toString(),
                                   recipe: document['recipe'].toString(),
                                 );
-                                // Navigator.push(
-                                //     context,
-                                //     MaterialPageRoute(
-                                //         builder: (context) => VerReceta(
-                                //             recipe: recipe,
-                                //             idRecipe:
-                                //                 document.documentID,
-                                //             uid: userID)));
+                                Navigator.push(
+                                     context,
+                                     MaterialPageRoute(
+                                         builder: (context) => ViewRecipe(
+                                            recipe: recipe,
+                                             idRecipe: document.documentID,
+                                             uid: userID)));
                               },
                               child: Stack(
                                 children: <Widget>[
